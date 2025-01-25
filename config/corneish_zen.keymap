@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -96,7 +97,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp LC(RA(DELETE))  &none              &none       &none             &none            &kp C_POWER     &none           &kp PAGE_DOWN  &kp PAGE_UP   &none      &kp PRINTSCREEN  &kp DELETE
+&kp LC(RA(DELETE))  &bt BT_CLR_ALL     &bt BT_PRV  &bt BT_NXT        &bt BT_CLR       &kp C_POWER     &none           &kp PAGE_DOWN  &kp PAGE_UP   &none      &kp PRINTSCREEN  &kp DELETE
 &trans              &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &none           &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none            &kp INSERT
 &kp CAPSLOCK        &rgb_ug RGB_TOG    &none       &macro0           &macro1          &kp C_SLEEP     &none           &kp HOME       &kp END       &none      &none            &trans
                                                    &sk LEFT_GUI      &mo 3            &kp LEFT_GUI    &none           &none          &none
