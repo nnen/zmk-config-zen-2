@@ -87,7 +87,7 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "FN";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
@@ -96,20 +96,20 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp LC(RA(DELETE))  &kp EXCL         &kp AT  &kp HASH      &kp DLLR  &kp PRCNT       &none           &kp PAGE_DOWN  &kp PAGE_UP   &none      &kp PRINTSCREEN  &kp DELETE
-&trans              &none            &none   &none         &none     &none           &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none            &kp INSERT
-&kp CAPSLOCK        &rgb_ug RGB_TOG  &none   &macro0       &macro1   &none           &none           &kp HOME       &kp END       &none      &none            &trans
-                                             &sk LEFT_GUI  &mo 3     &kp LEFT_GUI    &none           &none          &none
+&kp LC(RA(DELETE))  &none              &none       &none             &none            &kp C_POWER     &none           &kp PAGE_DOWN  &kp PAGE_UP   &none      &kp PRINTSCREEN  &kp DELETE
+&trans              &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &none           &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none            &kp INSERT
+&kp CAPSLOCK        &rgb_ug RGB_TOG    &none       &macro0           &macro1          &kp C_SLEEP     &none           &kp HOME       &kp END       &none      &none            &trans
+                                                   &sk LEFT_GUI      &mo 3            &kp LEFT_GUI    &none           &none          &none
             >;
         };
 
         layer_3 {
-            display-name = "Fn";
+            display-name = "SYMBOL";
             bindings = <
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN           &kp HASH          &kp DOLLAR      &kp PERCENT      &kp LCTRL         &kp AMPERSAND         &kp ASTERISK       &kp MINUS              &kp EQUAL      &kp NON_US_BACKSLASH
-&kp TILDE  &none            &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LESS_THAN    &kp GREATER_THAN  &kp RIGHT_BRACE       &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &none
-&trans     &kp MINUS        &kp PLUS              &kp ASTERISK      &kp SLASH       &kp EQUAL        &member_op        &kp NON_US_BACKSLASH  &kp PIPE           &kp AMPERSAND          &none          &kp PAUSE_BREAK
-                                                  &trans            &trans          &trans           &trans            &trans                &trans
+&kp GRAVE    &kp EXCLAMATION  &kp AT_SIGN           &kp HASH          &kp DOLLAR      &kp PERCENT      &kp LCTRL         &kp AMPERSAND         &kp ASTERISK       &kp MINUS              &kp EQUAL      &kp NON_US_BACKSLASH
+&kp TILDE    &none            &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LESS_THAN    &kp GREATER_THAN  &kp RIGHT_BRACE       &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &none
+&bootloader  &kp MINUS        &kp PLUS              &kp ASTERISK      &kp SLASH       &kp EQUAL        &member_op        &kp NON_US_BACKSLASH  &kp PIPE           &kp AMPERSAND          &none          &bootloader
+                                                    &trans            &trans          &trans           &trans            &trans                &trans
             >;
         };
     };
